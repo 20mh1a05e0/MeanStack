@@ -1,0 +1,76 @@
+doctype html
+html
+  head
+    title Login
+    style.
+      /* Inline CSS styles */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #BCC6CC;
+      }
+      
+      h1 {
+         color: black;
+         text-align: center;
+      }
+      form {
+        width: 300px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #FAFAD2;
+        border: 1px solid green;
+        border-radius: 5px;
+        text-align: center; /* Added text-align property to center form contents */
+        flex:row
+      }
+      
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      
+      input[type="text"],
+      input[type="password"] {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid green;
+        border-radius: 4px;
+        box-sizing: border-box;
+        background-color: white;
+      }
+      
+      input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+
+      .profile {
+        display: block;
+        margin: 0 auto;
+      }
+      p{
+        color:blue;
+      }
+     
+  body
+    h1 Login Form
+    br
+    form.centered-form(action='/profile', method='post')
+      legend.m
+        img.profile(src='https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/profile-avatar-img.png', width='20%', height='20%')
+      label(for='username') Username
+      input#username(type='text', name='username', required)
+      br
+      label(for='password') Password
+      input#password(type='password', name='password', required)
+      br
+      input(type='submit', value='Login')
