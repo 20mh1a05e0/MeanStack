@@ -1,0 +1,59 @@
+doctype html
+html
+  head
+    script(src="https://kit.fontawesome.com/92d70a2fd8.js" crossorigin="anonymous")
+    style.
+      body {
+         font-family: Arial, Helvetica, sans-serif;
+         background-color:#f2f2f2}
+      .h1{
+        color:black;
+      }
+      .container{
+        padding-left: 0%;
+        border: 2px;
+        margin:50px;
+      }
+      .f{
+        padding-top:7px;
+        width: 300px;
+        height:350px;
+        display: flex;
+        flex-direction:row;
+        flex-wrap:wrap;
+        margin-top: 60px;
+        background-color: #C0C0C0;
+      }
+      .button{
+        background-color: rgb(53, 222, 53);
+      }
+      .p1{
+        color:blue;
+      }
+
+  body
+    center
+      form(action="/login" method="post")
+        fieldset.f
+          legend.l
+            // img(src='https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/profile-avatar-img.png' width=60% height=40%)
+            h1.h1 Registration Form
+          .container
+            .i1
+              i.fa.fa-user(aria-hidden="true")
+              input(type="text", placeholder="username",name="username" required)
+            br
+            .i1
+              i.fa.fa-lock(aria-hidden="true")
+              input(type="password", placeholder="password", name="password" required)
+            br
+            .i1
+              i.fa.fa-envelope(aria-hidden="true")
+              input(type="email", placeholder="email@gmail.com",name="mail" required)
+            br
+            div
+              input(type="submit", value="SignUp", class="button")
+            div
+            p
+              By creating an account you agree to our
+              a(href="#" style="color:dodgerblue") Terms & privacy
